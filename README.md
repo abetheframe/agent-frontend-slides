@@ -1,5 +1,7 @@
 # 從 Chatbox 到 Copilot
 
+![Cover](public/cover.png)
+
 > 下一代 Agent 前端架構 — AG-UI & CopilotKit 探索 × Brainstorming
 
 Team Brainstorm 簡報，使用 [Slidev](https://sli.dev) 製作。
