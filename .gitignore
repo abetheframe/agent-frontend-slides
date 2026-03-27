@@ -1,0 +1,29 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+
+# Slidev cache
+.slidev
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Environment
+*.local
+.env
+.env.*
+
+# Logs
+*.log
+
+# Lock files (using pnpm)
+package-lock.json
+yarn.lock

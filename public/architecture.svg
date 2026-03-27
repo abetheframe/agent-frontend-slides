@@ -1,0 +1,93 @@
+<svg viewBox="0 0 960 320" xmlns="http://www.w3.org/2000/svg" style="font-family: 'DM Sans', system-ui, sans-serif;">
+  <defs>
+    <marker id="a-teal" viewBox="0 0 10 8" refX="10" refY="4" markerWidth="7" markerHeight="5" orient="auto">
+      <path d="M0,1 L8,4 L0,7" fill="none" stroke="#2dd4bf" stroke-width="1.5"/>
+    </marker>
+    <marker id="a-teal-r" viewBox="0 0 10 8" refX="0" refY="4" markerWidth="7" markerHeight="5" orient="auto">
+      <path d="M10,1 L2,4 L10,7" fill="none" stroke="#2dd4bf" stroke-width="1.5"/>
+    </marker>
+    <marker id="a-gray" viewBox="0 0 10 8" refX="10" refY="4" markerWidth="7" markerHeight="5" orient="auto">
+      <path d="M0,1 L8,4 L0,7" fill="none" stroke="#475569" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <!-- ===== NODE BOXES ===== -->
+
+  <!-- React -->
+  <rect x="30" y="90" width="160" height="72" rx="16" fill="#0d2d2a" stroke="#2dd4bf50" stroke-width="1.5"/>
+  <text x="110" y="120" text-anchor="middle" fill="#2dd4bf" font-size="16" font-weight="700">React (Vite)</text>
+  <text x="110" y="140" text-anchor="middle" fill="#94a3b8" font-size="10">CopilotKit SDK</text>
+  <!-- React tags -->
+  <rect x="34" y="174" width="46" height="17" rx="4" fill="#ffffff06" stroke="#ffffff0f"/>
+  <text x="57" y="186" text-anchor="middle" fill="#94a3b8" font-size="8" style="font-family: 'JetBrains Mono', monospace">Chat UI</text>
+  <rect x="84" y="174" width="40" height="17" rx="4" fill="#ffffff06" stroke="#ffffff0f"/>
+  <text x="104" y="186" text-anchor="middle" fill="#94a3b8" font-size="8" style="font-family: 'JetBrains Mono', monospace">Hooks</text>
+  <rect x="128" y="174" width="58" height="17" rx="4" fill="#2dd4bf18" stroke="#2dd4bf35"/>
+  <text x="157" y="186" text-anchor="middle" fill="#2dd4bf" font-size="8" style="font-family: 'JetBrains Mono', monospace">Gen UI</text>
+
+  <!-- FastAPI -->
+  <rect x="370" y="90" width="160" height="72" rx="16" fill="#1a1533" stroke="#a78bfa50" stroke-width="1.5"/>
+  <text x="450" y="120" text-anchor="middle" fill="#a78bfa" font-size="16" font-weight="700">FastAPI</text>
+  <text x="450" y="140" text-anchor="middle" fill="#94a3b8" font-size="10">CopilotKit Endpoint</text>
+  <!-- FastAPI tags -->
+  <rect x="390" y="174" width="46" height="17" rx="4" fill="#ffffff06" stroke="#ffffff0f"/>
+  <text x="413" y="186" text-anchor="middle" fill="#94a3b8" font-size="8" style="font-family: 'JetBrains Mono', monospace">Router</text>
+  <rect x="440" y="174" width="34" height="17" rx="4" fill="#ffffff06" stroke="#ffffff0f"/>
+  <text x="457" y="186" text-anchor="middle" fill="#94a3b8" font-size="8" style="font-family: 'JetBrains Mono', monospace">SDK</text>
+
+  <!-- Agent -->
+  <rect x="650" y="90" width="150" height="72" rx="16" fill="#1f1a0d" stroke="#fbbf2440" stroke-width="1.5"/>
+  <text x="725" y="120" text-anchor="middle" fill="#fbbf24" font-size="16" font-weight="700">Agent</text>
+  <text x="725" y="140" text-anchor="middle" fill="#94a3b8" font-size="10">LangGraph / CrewAI</text>
+  <!-- Agent tags -->
+  <rect x="675" y="174" width="38" height="17" rx="4" fill="#ffffff06" stroke="#ffffff0f"/>
+  <text x="694" y="186" text-anchor="middle" fill="#94a3b8" font-size="8" style="font-family: 'JetBrains Mono', monospace">Tools</text>
+  <rect x="717" y="174" width="38" height="17" rx="4" fill="#ffffff06" stroke="#ffffff0f"/>
+  <text x="736" y="186" text-anchor="middle" fill="#94a3b8" font-size="8" style="font-family: 'JetBrains Mono', monospace">State</text>
+
+  <!-- LLM -->
+  <rect x="870" y="98" width="80" height="56" rx="16" fill="#1f0d1a" stroke="#f472b650" stroke-width="1.5"/>
+  <text x="910" y="122" text-anchor="middle" fill="#f472b6" font-size="16" font-weight="700">LLM</text>
+  <text x="910" y="138" text-anchor="middle" fill="#94a3b8" font-size="9">GPT / Claude</text>
+
+  <!-- ===== CONNECTIONS ===== -->
+
+  <!-- React → FastAPI: request (dashed, top) -->
+  <line x1="190" y1="112" x2="368" y2="112" stroke="#2dd4bf" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#a-teal)" opacity="0.5"/>
+
+  <!-- FastAPI → React: SSE response (solid, bottom) -->
+  <line x1="370" y1="140" x2="192" y2="140" stroke="#2dd4bf" stroke-width="1.8" marker-end="url(#a-teal-r)" opacity="0.7"/>
+
+  <!-- AG-UI badge -->
+  <rect x="230" y="58" width="100" height="22" rx="11" fill="#2dd4bf18" stroke="#2dd4bf40"/>
+  <text x="280" y="73" text-anchor="middle" fill="#2dd4bf" font-size="10" font-weight="600" style="font-family: 'JetBrains Mono', monospace">AG-UI / SSE</text>
+
+  <!-- Request label -->
+  <text x="280" y="106" text-anchor="middle" fill="#94a3b8" font-size="7.5" style="font-family: 'JetBrains Mono', monospace">User Message, Action Results →</text>
+
+  <!-- Response label -->
+  <text x="280" y="156" text-anchor="middle" fill="#94a3b8" font-size="7.5" style="font-family: 'JetBrains Mono', monospace">← Messages, Tool Calls, State, HITL</text>
+
+  <!-- FastAPI → Agent -->
+  <line x1="530" y1="126" x2="648" y2="126" stroke="#475569" stroke-width="1.2" marker-end="url(#a-gray)" opacity="0.4"/>
+  <text x="589" y="120" text-anchor="middle" fill="#94a3b8" font-size="8" style="font-family: 'JetBrains Mono', monospace">SDK 內部</text>
+
+  <!-- Agent → LLM -->
+  <line x1="800" y1="126" x2="868" y2="126" stroke="#475569" stroke-width="1.2" marker-end="url(#a-gray)" opacity="0.4"/>
+  <text x="834" y="120" text-anchor="middle" fill="#94a3b8" font-size="8" style="font-family: 'JetBrains Mono', monospace">API</text>
+
+  <!-- ===== ZONE LABELS ===== -->
+  <line x1="0" y1="220" x2="960" y2="220" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="110" y="242" text-anchor="middle" fill="#64748b" font-size="10" font-weight="500">Frontend</text>
+  <text x="450" y="242" text-anchor="middle" fill="#64748b" font-size="10" font-weight="500">Backend</text>
+  <text x="725" y="242" text-anchor="middle" fill="#64748b" font-size="10" font-weight="500">Runtime</text>
+  <text x="910" y="242" text-anchor="middle" fill="#64748b" font-size="10" font-weight="500">Model</text>
+
+  <!-- Subtle dividers -->
+  <line x1="280" y1="224" x2="280" y2="250" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="590" y1="224" x2="590" y2="250" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <line x1="840" y1="224" x2="840" y2="250" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="3,3"/>
+
+  <!-- Bottom note -->
+  <text x="480" y="285" text-anchor="middle" fill="#94a3b8" font-size="10">前端 Vite + React，後端 FastAPI，各自部署 · AG-UI protocol 統一溝通介面</text>
+</svg>

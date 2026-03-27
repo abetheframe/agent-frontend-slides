@@ -1,0 +1,16 @@
+{
+  "name": "agent-frontend-slides",
+  "private": true,
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.14.0",
+    "@slidev/theme-default": "*"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.50.0"
+  }
+}
